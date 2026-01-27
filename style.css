@@ -1,4 +1,3 @@
-/* Cover utama */
 .cover {
     position: relative;
     width: 100%;
@@ -36,17 +35,40 @@
     right: 10%;
 }
 
-/* Konten cover */
+.cover {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .cover-content {
     position: relative;
     z-index: 2;
-    max-width: 600px;
+    text-align: center;
 }
 
-/* Logo */
+/* ANIMASI LOGO */
 .logo {
-    width: 300px;
-    margin-bottom: 0px;
+    width: 150px;
+    animation: popIn 1.2s ease forwards;
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    80% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 /* Judul */
@@ -97,16 +119,13 @@
     transform: translateX(-50%);
     width: calc(100% - 80px);
     padding: 14px 32px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(10px);
     border-radius: 18px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
     z-index: 1000;
 }
 
@@ -142,7 +161,7 @@
     gap: 32px;
 }
 
-/* Link menu */
+/* Menu tautan */
 .nav-menu li a {
     position: relative;
     text-decoration: none;
@@ -153,7 +172,7 @@
     transition: color 0.3s ease;
 }
 
-/* Underline animasi */
+/* Animasi garis bawah */
 .nav-menu li a::after {
     content: "";
     position: absolute;
@@ -175,327 +194,341 @@
     color: #111827;
 }
 
-/* Active menu */
+/* Menu aktif */
 .nav-menu li a.active {
     color: #111827;
 }
 
+.nav-menu li a:hover {
+  color: #111827;
+}
+
+/* Menu aktif */
+.nav-menu li a.active {
+  color: #111827;
+}
+
 /* Tombol CTA */
 .nav-cta {
-    padding: 10px 20px;
-    background: linear-gradient(135deg, #ec4899, #8b5cf6);
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-    border-radius: 999px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #ec4899, #8b5cf6);
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 999px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .nav-cta:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(236, 72, 153, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(236, 72, 153, 0.4);
 }
 
-/* About Us Section */
+/* Bagian Tentang Kami */
 .about {
-    padding: 100px 80px;
-    background: #ffffff;
+  padding: 100px 80px;
+  background: #ffffff;
 }
 
 .about-container {
-    max-width: 1100px;
-    margin: auto;
-    text-align: center;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
 }
 
-/* Judul section */
+/* Bagian Judul */
 .section-title {
-    font-size: 40px;
-    font-weight: 800;
-    margin-bottom: 20px;
-    color: #111827;
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #111827;
 }
 
 /* Deskripsi */
 .about-desc {
-    font-size: 17px;
-    color: #4b5563;
-    max-width: 700px;
-    margin: 0 auto 60px;
-    line-height: 1.7;
+  font-size: 17px;
+  color: #4b5563;
+  max-width: 700px;
+  margin: 0 auto 60px;
+  line-height: 1.7;
 }
 
 /* Visi & Misi */
 .vision-mission {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-bottom: 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 80px;
 }
 
 .box {
-    background: linear-gradient(135deg, #fde2f3, #e0f2fe);
-    padding: 35px;
-    border-radius: 20px;
-    text-align: left;
+  background: linear-gradient(135deg, #fde2f3, #e0f2fe);
+  padding: 35px;
+  border-radius: 20px;
+  text-align: left;
 }
 
 .box h3 {
-    font-size: 22px;
-    margin-bottom: 12px;
-    color: #111827;
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #111827;
 }
 
 .box p,
 .box ul {
-    font-size: 15px;
-    color: #374151;
-    line-height: 1.6;
+  font-size: 15px;
+  color: #374151;
+  line-height: 1.6;
 }
 
 .box ul {
-    padding-left: 20px;
+  padding-left: 20px;
 }
 
 .box ul li {
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 /* Struktur Tim */
 .team h3 {
-    font-size: 28px;
-    margin-bottom: 30px;
-    color: #111827;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #111827;
 }
 
 .team-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
 }
 
 .team-card {
-    background: #f9fafb;
-    padding: 30px;
-    border-radius: 18px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  background: #f9fafb;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
 .team-card h4 {
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 6px;
-    color: #111827;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #111827;
 }
 
 .team-card p {
-    font-size: 14px;
-    color: #6b7280;
+  font-size: 14px;
+  color: #6b7280;
 }
 
-/* Portfolio Section */
+/* Bagian Portofolio */
 .portfolio {
-    padding: 100px 80px;
-    background: linear-gradient(135deg, #fdf2f8, #eff6ff);
+  padding: 100px 80px;
+  background: linear-gradient(135deg, #fdf2f8, #eff6ff);
 }
 
 .portfolio-container {
-    max-width: 1100px;
-    margin: auto;
-    text-align: center;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
 }
 
 /* Deskripsi */
 .portfolio-desc {
-    font-size: 17px;
-    color: #4b5563;
-    max-width: 700px;
-    margin: 0 auto 60px;
-    line-height: 1.7;
+  font-size: 17px;
+  color: #4b5563;
+  max-width: 700px;
+  margin: 0 auto 60px;
+  line-height: 1.7;
 }
 
 /* Grid */
 .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
 }
 
 /* Card */
 .portfolio-card {
-    background: white;
-    padding: 30px;
-    border-radius: 22px;
-    text-align: left;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.06);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: white;
+  padding: 30px;
+  border-radius: 22px;
+  text-align: left;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .portfolio-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-/* Placeholder image */
+/* Gambar placeholder */
 .portfolio-img {
-    height: 160px;
-    border-radius: 16px;
-    background: linear-gradient(135deg, #ec4899, #8b5cf6);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
+  height: 160px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ec4899, #8b5cf6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .portfolio-img span {
-    color: white;
-    font-weight: 700;
-    font-size: 18px;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
 }
 
-/* Judul card */
+/* Kartu judul */
 .portfolio-card h3 {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 8px;
-    color: #111827;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #111827;
 }
 
-/* Deskripsi card */
+/* Deskripsi kartu */
 .portfolio-card p {
-    font-size: 15px;
-    color: #6b7280;
-    line-height: 1.6;
+  font-size: 15px;
+  color: #6b7280;
+  line-height: 1.6;
 }
 
-/* Contact Section */
-.contact {
-    padding: 100px 80px;
-    background: #ffffff;
-}
-
-.contact-container {
-    max-width: 1100px;
-    margin: auto;
-    text-align: center;
-}
-
-.contact-desc {
-    max-width: 650px;
-    margin: 0 auto 60px;
-    font-size: 17px;
-    color: #4b5563;
-    line-height: 1.7;
-}
-
-/* Contact Box */
+/* Kotak Kontak */
 .contact-box {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 40px;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: center;
 }
 
-/* Form */
+/* Formulir */
 .contact-form {
-    background: #fdf2f8;
-    padding: 40px;
-    border-radius: 22px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  background: linear-gradient(135deg, #fdf2f8, #eef2ff);
+  padding: 45px;
+  border-radius: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
 }
 
+/* Input & Textarea */
 .contact-form input,
 .contact-form textarea {
-    padding: 14px 18px;
-    border-radius: 14px;
-    border: none;
-    outline: none;
-    font-size: 15px;
-    background: white;
+  padding: 15px 18px;
+  border-radius: 14px;
+  border: 2px solid transparent;
+  outline: none;
+  font-size: 15px;
+  background: white;
+  transition: all 0.3s ease;
 }
 
+/* Focus effect */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.15);
+}
+
+/* Placeholder */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #9ca3af;
+}
+
+/* Button */
 .contact-form button {
-    background: linear-gradient(135deg, #ec4899, #8b5cf6);
-    color: white;
-    border: none;
-    padding: 14px;
-    border-radius: 14px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
+  margin-top: 10px;
+  background: linear-gradient(135deg, #ec4899, #8b5cf6);
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 12px 25px rgba(139, 92, 246, 0.35);
 }
 
+/* Hover button */
 .contact-form button:hover {
-    opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 18px 35px rgba(139, 92, 246, 0.45);
+}
+
+/* Active button */
+.contact-form button:active {
+  transform: scale(0.97);
 }
 
 /* Info */
 .contact-info {
-    text-align: left;
+  text-align: left;
 }
 
 .contact-info h3 {
-    font-size: 22px;
-    margin-bottom: 15px;
+  font-size: 22px;
+  margin-bottom: 15px;
 }
 
 .contact-info p {
-    font-size: 16px;
-    color: #374151;
-    margin-bottom: 10px;
+  font-size: 16px;
+  color: #374151;
+  margin-bottom: 10px;
 }
 
 /* Review Section */
 .review {
-    padding: 100px 80px;
-    background: linear-gradient(135deg, #fdf2f8, #eff6ff);
+  padding: 100px 80px;
+  background: linear-gradient(135deg, #fdf2f8, #eff6ff);
 }
 
 .review-container {
-    max-width: 1100px;
-    margin: auto;
-    text-align: center;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
 }
 
 .review-desc {
-    max-width: 600px;
-    margin: 0 auto 60px;
-    font-size: 17px;
-    color: #4b5563;
+  max-width: 600px;
+  margin: 0 auto 60px;
+  font-size: 17px;
+  color: #4b5563;
 }
 
 .review-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
 }
 
 .review-card {
-    background: white;
-    padding: 30px;
-    border-radius: 22px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.06);
+  background: white;
+  padding: 30px;
+  border-radius: 22px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.06);
 }
 
 .review-card .stars {
-    color: #f59e0b;
-    font-size: 20px;
-    margin-bottom: 15px;
+  color: #f59e0b;
+  font-size: 20px;
+  margin-bottom: 15px;
 }
 
 .review-card p {
-    font-size: 15px;
-    color: #374151;
-    line-height: 1.6;
-    margin-bottom: 15px;
+  font-size: 15px;
+  color: #374151;
+  line-height: 1.6;
+  margin-bottom: 15px;
 }
 
 .review-card h4 {
-    font-size: 16px;
-    font-weight: 700;
+  font-size: 16px;
+  font-weight: 700;
 }
-
