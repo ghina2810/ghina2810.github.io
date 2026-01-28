@@ -534,3 +534,43 @@
   font-size: 16px;
   font-weight: 700;
 }
+
+/* Container utama */
+.container {
+  width: 90%;        /* Mengikuti lebar layar */
+  max-width: 1200px; /* Jangan terlalu lebar di laptop */
+  margin: 0 auto;    /* Tengah layar */
+}
+
+/* Flexbox untuk beberapa elemen */
+.row {
+  display: flex;
+  flex-wrap: wrap;   /* Agar di HP bisa turun ke bawah */
+  gap: 20px;
+}
+
+.column {
+  flex: 1;           /* Lebar otomatis menyesuaikan layar */
+  min-width: 250px;  /* Jangan terlalu sempit di HP */
+}
+
+/* Untuk layar maksimal 600px (HP) */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;  /* Font lebih kecil supaya muat */
+  }
+  
+  .row {
+    flex-direction: column; /* Semua kolom jadi baris vertikal */
+  }
+
+  .container {
+    width: 95%;      /* Lebih lebar mengikuti layar HP */
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
