@@ -2,13 +2,18 @@
     position: relative;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(135deg, #fde2f3, #e0f2fe);
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     overflow: hidden;
     padding-top: 120px;
+
+    /* Background image baru */
+    background-image: url('background.jpg'); /* atau URL langsung */
+    background-size: cover;       /* Supaya menutupi seluruh cover */
+    background-position: center;  /* Tengah gambar */
+    background-repeat: no-repeat; /* Jangan diulang */
 }
 
 /* Dekorasi blob */
@@ -22,7 +27,7 @@
 .decor-1 {
     width: 300px;
     height: 300px;
-    background: #f9a8d4;
+    background: #eeeeec;
     top: 10%;
     left: 10%;
 }
@@ -30,7 +35,7 @@
 .decor-2 {
     width: 350px;
     height: 350px;
-    background: #93c5fd;
+    background: #fcfcfd;
     bottom: 10%;
     right: 10%;
 }
@@ -75,12 +80,12 @@
 .cover-content h1 {
     font-size: 56px;
     font-weight: 800;
-    color: #111827;
+    color: #0f1011;
     margin-bottom: 14px;
 }
 
 .cover-content h1 span {
-    background: linear-gradient(135deg, #ec4899, #8b5cf6);
+    background: linear-gradient(135deg, #f08080, #cb67e4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -103,12 +108,12 @@
 /* Button utama */
 .btn-primary {
     padding: 14px 26px;
-    background: linear-gradient(135deg, #ec4899, #8b5cf6);
+    background: linear-gradient(135deg, #e987b4, #b6eea5);
     color: white;
     text-decoration: none;
     font-weight: 600;
     border-radius: 999px;
-    box-shadow: 0 10px 25px rgba(236, 72, 153)
+    box-shadow: 0 10px 25px rgb(206, 212, 122)
 }
 
 /* Navbar utama */
@@ -151,7 +156,7 @@
 .nav-logo {
     font-size: 22px;
     font-weight: 800;
-    color: #111827;
+    color: #686869;
 }
 
 /* Menu */
@@ -228,7 +233,7 @@
 /* Bagian Tentang Kami */
 .about {
   padding: 100px 80px;
-  background: #ffffff;
+  background: #fdfdfd;
 }
 
 .about-container {
@@ -242,7 +247,7 @@
   font-size: 40px;
   font-weight: 800;
   margin-bottom: 20px;
-  color: #111827;
+  color: #4b4b4d;
 }
 
 /* Deskripsi */
@@ -263,7 +268,7 @@
 }
 
 .box {
-  background: linear-gradient(135deg, #fde2f3, #e0f2fe);
+  background: linear-gradient(135deg, #f0c1dc, #e6c4f3);
   padding: 35px;
   border-radius: 20px;
   text-align: left;
@@ -304,7 +309,7 @@
 }
 
 .team-card {
-  background: #f9fafb;
+  background: #e0f3b3;
   padding: 30px;
   border-radius: 18px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
@@ -369,7 +374,7 @@
 .portofolio-img {
   height: 160px;
   border-radius: 16px;
-  background: linear-gradient(135deg, #ec4899, #8b5cf6);
+  background: linear-gradient(135deg, #f3c3db, #b39ce9);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -408,7 +413,7 @@
 /* Contact Section */
 .contact {
     padding: 100px 80px;
-    background: #ffffff;
+    background: #fffdfd;
 }
 
 .contact-container {
@@ -454,7 +459,7 @@
 }
 
 .contact-form button {
-    background: linear-gradient(135deg, #ec4899, #8b5cf6);
+    background: linear-gradient(135deg, #315deb, #cbbaf1);
     color: white;
     border: none;
     padding: 14px;
@@ -567,10 +572,5 @@
   .container {
     width: 95%;      /* Lebih lebar mengikuti layar HP */
   }
-}
-
-img {
-  max-width: 100%;
-  height: auto;
 }
 
