@@ -51,7 +51,7 @@
 
 /* ANIMASI LOGO */
 .logo {
-    width: 400px;
+    width: 300px;
     animation: popIn 1.2s ease forwards;
 }
 
